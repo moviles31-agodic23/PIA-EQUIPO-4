@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PaginaPerfilComponent } from './pagina-perfil/pagina-perfil.component';
+import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
 
 const routes: Routes = [
   {
@@ -9,13 +10,17 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
     path: 'perfil',
     component: PaginaPerfilComponent
   },
+  {
+    path: 'inicio',
+    component: PaginaInicioComponent
+  }
 ];
 
 @NgModule({
