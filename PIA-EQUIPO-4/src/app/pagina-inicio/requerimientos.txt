@@ -1,0 +1,8 @@
+Necesito:
+    Dentro de un ion-card
+        Nombre del perfil
+        Foto de perfil
+        Fotos del perfil                                                //  Diferente en cada ion-card
+            Descripcion de la Foto                                      //  Diferente en cada ion-card
+            Cambiar de color los iconos de la foto
+            Hacerla clickeable para ir al detalle de la foto
