@@ -1,3 +1,28 @@
-<p>
-  pagina
-</p>
+<ion-app>
+  <ion-content>
+    <ion-grid fixed>
+      <ion-row *ngFor="let perfilEjemplo of perfilesEjemplo">
+        <ion-card style="box-shadow: none !important; background: transparent !important; padding: 0% !important; margin: 0px !important">
+          <ion-card-content style="padding: 0% !important; margin: 0px !important">
+            <ion-grid>
+              <ion-row class="fotoYNombre">
+                <img class="fotoPerfil" src="{{perfilEjemplo.fotoPerfil}}" alt="">
+                <div class="nombrePerfil"> {{perfilEjemplo.nombrePerfil}}</div>
+                <p class="tresPuntos">...</p>
+              </ion-row>
+              <ion-row>
+                <div class="fotosDelPerfil"> <img src="{{perfilEjemplo.fotosDelPerfil}}" alt=""></div>
+              </ion-row>
+              <ion-row class="iconosDeFoto">
+                
+              </ion-row>
+              <ion-row class="descripcionFoto">
+
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-app>
