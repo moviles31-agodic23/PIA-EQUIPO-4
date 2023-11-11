@@ -17,6 +17,6 @@ import { PaginaPerfilComponent } from '../pagina-perfil/pagina-perfil.component'
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, LoginComponent, PaginaInicioComponent, PaginaPerfilComponent]
+  declarations: [HomePage]
 })
 export class HomePageModule {}
