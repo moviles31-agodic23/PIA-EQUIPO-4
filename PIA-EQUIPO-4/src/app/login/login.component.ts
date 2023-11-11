@@ -17,7 +17,6 @@ export class LoginComponent  implements OnInit {
    
   Ingresar(){
     this.Usuario = { usuario: '', password: '' };
-
   }
 
 

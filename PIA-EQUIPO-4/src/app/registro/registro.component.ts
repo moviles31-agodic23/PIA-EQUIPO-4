@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { nuevoUsuario,Usuarios } from '../usuario.module';
+import { nuevoUsuario } from '../usuario.module';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,15 +10,14 @@ import { Router } from '@angular/router';
 export class RegistroComponent implements OnInit {
 
   nuevoUsuario: nuevoUsuario = { usuario: '', password: '',confirmacionpassword:''};
-  usuarios: Usuarios = { usuarios: [] }; // Inicializa usuarios como un objeto con una propiedad usuarios que es un array
-
+  usuarios:any =[]; 
 
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   agregarUsuario() {
-    this.usuarios.usuarios.push(this.nuevoUsuario);
+    this.usuarios.push(this.nuevoUsuario);
     this.nuevoUsuario = { usuario: '', password: '', confirmacionpassword: '' };
   }
 
