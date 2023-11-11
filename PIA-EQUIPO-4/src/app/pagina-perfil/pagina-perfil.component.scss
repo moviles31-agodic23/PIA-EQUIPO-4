@@ -1,0 +1,27 @@
+#fotoPerfil{
+    width: 100px;
+    border-radius: 100%;
+    border: solid 3px rgb(71, 255, 47);
+    padding: 3px;
+}
+ion-card{
+    border-bottom: solid 3px gray;
+    border-radius: none;
+}
+ion-col{
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+#nombrePerfil{
+    float: left;
+}
+
+#descripcionPerfil{
+    float: left;
+}
+
+img #imagenesPerfil{
+    width: 100%;
+}
