@@ -21,7 +21,7 @@
 
               </ion-row>
               <ion-row class="postText">
-                <div *ngIf="!perfilEjemplo.showFullText">{{ perfilEjemplo.descripcionFoto | slice:0:10 }}</div><div *ngIf="!perfilEjemplo.showFullText" (click)="perfilEjemplo.showFullText = true">... Ver mas</div>
+                <div *ngIf="!perfilEjemplo.showFullText">{{ perfilEjemplo.descripcionFoto | slice:0:10 }}</div><div *ngIf="!perfilEjemplo.showFullText" (click)="perfilEjemplo.showFullText = true">... Ver más</div>
                 <div *ngIf="perfilEjemplo.showFullText">{{perfilEjemplo.descripcionFoto}}</div>
               </ion-row>
             </ion-grid>
