@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-inicio',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaInicioComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -26,7 +27,9 @@ export class PaginaInicioComponent  implements OnInit {
     seguidosPerfil: "12",
     descripcionPerfil: "Hola",
     fotosDelPerfil: "https://th.bing.com/th/id/OIP.PNLxg3EbdNVa-lUez5Sj3wHaLH?pid=ImgDet&rs=1",
-    descripcionFoto: "Hola esta es una descripcion"
+    descripcionFoto: "Hola esta es una descripcion",
+    showFullText: false,
+    like: false
   };
 
   perfilEjemplo2 = {
@@ -39,6 +42,10 @@ export class PaginaInicioComponent  implements OnInit {
     fotosDelPerfil: "https://th.bing.com/th/id/OIP.7ysj6BCPhm7U7xE56etBHgHaHa?pid=ImgDet&rs=1",
     descripcionFoto: "Hola esta es una segunda descripcion",
     showFullText: false,
-    like: true
+    like: false
   };
+
+  irAPerfil(){
+    this.router.navigate(['/perfil']);
+  }
 }
