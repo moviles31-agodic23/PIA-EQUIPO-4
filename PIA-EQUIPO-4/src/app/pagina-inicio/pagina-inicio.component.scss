@@ -1,0 +1,44 @@
+ion-card{
+    margin-bottom: 10vh;
+}
+
+.publicaciones{
+    margin-top: 5vh;
+}
+
+
+.postHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vh;
+    margin-left: 1vh;
+}
+
+.tresPuntos{
+    margin-left: auto;
+}
+
+.fotoPerfil {
+    border-radius: 50%;
+    width: 10%;
+    height: auto;
+}
+
+
+.iconosDeFoto{
+    margin-top: 1vh;
+    display: flex;
+    gap: 2vh;
+    margin-left: 1vh;
+    font-size: xx-large;
+}
+
+.fotosDelPerfil{
+    margin-top: 3vw;
+    width: 100%;
+}
+
+.postText{
+    margin: 2vh 1vh;
+}

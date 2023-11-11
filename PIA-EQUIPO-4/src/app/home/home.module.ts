@@ -19,6 +19,6 @@ import { RegistroComponent } from '../registro/registro.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,LoginComponent,PaginaInicioComponent,PaginaPerfilComponent,RegistroComponent]
+  declarations: [HomePage, LoginComponent, PaginaInicioComponent, PaginaPerfilComponent]
 })
 export class HomePageModule {}
