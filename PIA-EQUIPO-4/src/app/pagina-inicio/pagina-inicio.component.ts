@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-inicio',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaInicioComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -19,18 +20,20 @@ export class PaginaInicioComponent  implements OnInit {
 
 
   perfilEjemplo = {
-    fotoPerfil: "https://scontent.fntr8-1.fna.fbcdn.net/v/t39.30808-6/355269832_6061859987275836_3978109988933382981_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=JLEPiew8O9MAX9RwLV1&_nc_ht=scontent.fntr8-1.fna&oh=00_AfDrSVrmSIizU45HzoU9PqZJzMBhDJr2DuUfet3eUcHHog&oe=654F767A",
+    fotoPerfil: "https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/cataluna/selfies-sagrada-familia-barcelona-portada-s2124850073-c-davide-angelini.png_1014274486.png",
     nombrePerfil: "Cesar",
     seguidoresPerfil: "12",
     publicacionesPerfil: "12",
     seguidosPerfil: "12",
     descripcionPerfil: "Hola",
     fotosDelPerfil: "https://th.bing.com/th/id/OIP.PNLxg3EbdNVa-lUez5Sj3wHaLH?pid=ImgDet&rs=1",
-    descripcionFoto: "Hola esta es una descripcion"
+    descripcionFoto: "Hola esta es una descripcion",
+    showFullText: false,
+    like: false
   };
 
   perfilEjemplo2 = {
-    fotoPerfil: "https://scontent.fntr8-1.fna.fbcdn.net/v/t39.30808-6/355269832_6061859987275836_3978109988933382981_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=JLEPiew8O9MAX9RwLV1&_nc_ht=scontent.fntr8-1.fna&oh=00_AfDrSVrmSIizU45HzoU9PqZJzMBhDJr2DuUfet3eUcHHog&oe=654F767A",
+    fotoPerfil: "https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/cataluna/selfies-sagrada-familia-barcelona-portada-s2124850073-c-davide-angelini.png_1014274486.png",
     nombrePerfil: "Alexander",
     numeroSeguidoresPerfil: "12",
     numeroPublicacionesPerfil: "12",
@@ -39,6 +42,10 @@ export class PaginaInicioComponent  implements OnInit {
     fotosDelPerfil: "https://th.bing.com/th/id/OIP.7ysj6BCPhm7U7xE56etBHgHaHa?pid=ImgDet&rs=1",
     descripcionFoto: "Hola esta es una segunda descripcion",
     showFullText: false,
-    like: true
+    like: false
   };
+
+  irAPerfil(){
+    this.router.navigate(['/perfil']);
+  }
 }

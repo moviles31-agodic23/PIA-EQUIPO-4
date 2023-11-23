@@ -1,9 +1,18 @@
 #fotoPerfil{
-    width: 100px;
-    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
     border: solid 3px rgb(71, 255, 47);
     padding: 3px;
+
 }
+
+.arroba{
+    padding: 1vh;
+}
+
 ion-card{
     border-bottom: solid 3px gray;
     border-radius: none;

@@ -6,8 +6,8 @@
           <ion-card-content style="padding: 0% !important; margin: 0px !important" >
             <ion-grid  style="padding-inline-start: 0 !important; padding-inline-end: 0 !important;" >
               <ion-row class="postHeader">
-                  <img class="fotoPerfil" src="{{perfilEjemplo.fotoPerfil}}" alt="">
-                  <div class="nombrePerfil"> {{perfilEjemplo.nombrePerfil}}</div>
+                  <img class="fotoPerfil" src="{{perfilEjemplo.fotoPerfil}}" alt="" (click)="irAPerfil()">
+                  <div class="nombrePerfil" (click)="irAPerfil()"> {{perfilEjemplo.nombrePerfil}}</div>
                 <ion-icon name="ellipsis-horizontal-outline" class="tresPuntos"></ion-icon>
               </ion-row>
               <ion-row class="fotosDelPerfil">
@@ -21,7 +21,7 @@
 
               </ion-row>
               <ion-row class="postText">
-                <div *ngIf="!perfilEjemplo.showFullText">{{ perfilEjemplo.descripcionFoto | slice:0:10 }}</div><div *ngIf="!perfilEjemplo.showFullText" (click)="perfilEjemplo.showFullText = true">... Ver más</div>
+                <div *ngIf="!perfilEjemplo.showFullText" class="textoDescripcion">{{ perfilEjemplo.descripcionFoto | slice:0:10 }}</div><div *ngIf="!perfilEjemplo.showFullText" (click)="perfilEjemplo.showFullText = true">... Ver más</div>
                 <div *ngIf="perfilEjemplo.showFullText">{{perfilEjemplo.descripcionFoto}}</div>
               </ion-row>
             </ion-grid>
@@ -30,4 +30,26 @@
       </ion-row>
     </ion-grid>
   </ion-content>
+  <ion-toolbar>
+    <ion-tabs class="tabs">
+      <ion-tab-bar slot="bottom" >
+        <ion-tab-button tab="inicio" [routerLink]="['/inicio']">
+          <ion-icon name="home"></ion-icon>
+          Home
+        </ion-tab-button>
+        <ion-tab-button tab="Camara">
+          <ion-icon name="Camera"></ion-icon>
+          Foto
+        </ion-tab-button>
+        <ion-tab-button tab="perfil" [routerLink]="['/perfil']">
+          <ion-icon name="person"></ion-icon>
+          Perfil
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
 </ion-app>
+
+
+
+

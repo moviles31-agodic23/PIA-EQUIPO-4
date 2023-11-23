@@ -20,7 +20,7 @@ ion-card{
 }
 
 .fotoPerfil {
-    border-radius: 50%;
+    border-radius: 90%;
     width: 10%;
     height: auto;
 }
@@ -41,4 +41,12 @@ ion-card{
 
 .postText{
     margin: 2vh 1vh;
+}
+
+.tabs{
+    height: 100%;
+}
+
+.textoDescripcion{
+    font-family: 'Poppins', sans-serif;
 }
