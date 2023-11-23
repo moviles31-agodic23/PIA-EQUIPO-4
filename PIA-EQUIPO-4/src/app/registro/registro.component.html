@@ -1,34 +1,65 @@
-<ion-card >
-  <ion-card-header>
-    <ion-card-title>REGISTRO</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <form #templateForm="ngForm" (ngSubmit)="agregarUsuario()" [ngClass]="{
-      'form-invalid': templateForm.invalid,
-      'form-valid': templateForm.valid,
-      'form-dirty': templateForm.dirty,
-      'form-touched': templateForm.touched
-    }">
-      <ion-item>
-       <ion-input  [(ngModel)]="nuevoUsuario.usuario" name="usuario" required label="Usuario: "></ion-input>
-      </ion-item>
-      <ion-item>
-       <ion-input [(ngModel)]="nuevoUsuario.password"  name="contraseña" required label="Contraseña: " type="password">  </ion-input>
-      </ion-item>
-      <ion-item>
-      <ion-input [(ngModel)]="nuevoUsuario.confirmacionpassword"  name="confirmacioncontraseña" required label="Confirmacion Contraseña:"type="password"></ion-input>
-     </ion-item>
-      <br>
-      <ion-button type="Submit">Registrarse</ion-button>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>REGISTRO USUARIO</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <form [formGroup]="form" (ngSubmit)="registro()">
+        <ion-item class="custom-input">
+          <ion-input formControlName="nombre" [class.is-invalid]="nombreInvalido" id="nombre" required label="Nombre :" label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="nombreInvalido">El nombre es un campo requerido</small>
+        <br><br>
+  
+        <ion-item class="custom-input">
+          <ion-input formControlName="primerApellido"  [class.is-invalid]="primerApellidoInvalido" id="primerApellido" required label="Primer Apellido :" label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="primerApellidoInvalido">El primer apellido es un campo requerido</small>
+        <br><br>
+  
+        <ion-item class="custom-input">
+          <ion-input formControlName="segundoApellido" [class.is-invalid]="segundoApellidoInvalido"  id="segundoApellido" required label="Segundo Apellido :" label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="segundoApellidoInvalido">El segundo apellido es un campo requerido</small>
+        <br><br>
+
+        <ion-item class="custom-input">
+          <ion-input formControlName="correo" [class.is-invalid]="correoInvalido" id="correo" required label="Correo :" label-placement="floating" fill="outline" type="email"></ion-input>
+        </ion-item>
+        <small *ngIf="correoInvalido">El correo es un campo requerido</small>
+        <br><br>
+  
+        <ion-item class="custom-input">
+          <ion-input formControlName="nombreUsuario" [class.is-invalid]="usuarioInvalido" id="nombreUsuario" required label="Usuario: " label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="usuarioInvalido">El usuario es un campo requerido</small>
+        <br><br>
+        
+        <ion-item class="custom-input">
+          <ion-input formControlName="pass" [class.is-invalid]="passInvalido" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="passInvalido">Ingrese una contraseña con un minimo de 6 caracteres</small>
+        <br><br>
+        
+        <ion-item class="custom-input">
+          <ion-input formControlName="confirmacionpass"  [class.is-invalid]="confirmacionpassInvalido" id="confirmacionpass" required label="Confirmación Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="confirmacionpassInvalido">Las contraseñas no coiciden</small>
+        <br><br>
+  
+        <button class="registro" type="submit">Registrarse</button>
       </form>
-  </ion-card-content>
-</ion-card>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
 
-<ion-footer >
+<ion-footer>
   <ion-toolbar>
-      <ion-buttons >
-          <ion-button [routerLink]="['/login']" > ¿Ya tienes una cuenta? Inicia Sesion</ion-button>
-      </ion-buttons>
+    <ion-buttons>
+      <ion-button [routerLink]="['/login']"> ¿Ya tienes una cuenta?</ion-button>
+      <ion-button [routerLink]="['/login']" class="registrate"> Inicia Sesión</ion-button>
+    </ion-buttons>
   </ion-toolbar>
-
 </ion-footer>

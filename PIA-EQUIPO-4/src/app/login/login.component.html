@@ -1,26 +1,24 @@
 
-
   <ion-card>
     <ion-card-header>
       <ion-card-title>LOGIN</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <form #templateForm="ngForm" (ngSubmit)="Ingresar()" [ngClass]="{
-        'form-invalid': templateForm.invalid,
-        'form-valid': templateForm.valid,
-        'form-dirty': templateForm.dirty,
-        'form-touched': templateForm.touched
-      }">
+      <form [formGroup]="form" (ngSubmit)="login()">
+
+  
         <ion-item class="custom-input">
-         <ion-input  color="primary" [(ngModel)]="Usuario.usuario" name="usuario" required label="Usuario: " label-placement="floating" fill="outline" ></ion-input>
+          <ion-input formControlName="nombreUsuario" id="nombreUsuario" required label="Usuario: " label-placement="floating" fill="outline"></ion-input>
         </ion-item>
         <br>
+        
         <ion-item class="custom-input">
-         <ion-input [(ngModel)]="Usuario.password"  name="contraseña" required label="Contraseña:" type="password" label-placement="floating" fill="outline" >  </ion-input>
+          <ion-input formControlName="pass" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
         </ion-item>
         <br>
-        <button [routerLink]="['/inicio']" class="inicio" >Iniciar Sesion</button>
-        </form>
+
+        <button class="login" type="submit">Inciar Sesion</button>
+      </form>
     </ion-card-content>
   </ion-card>
 
