@@ -81,7 +81,7 @@ export class RegistroComponent implements OnInit {
   const passControl = formGroup.get(pass);
   const confirmacionpassControl = formGroup.get(confirmacionpass);
     
-  if(passControl?.value === confirmacionpassControl?.value){
+  if(passControl?.value == confirmacionpassControl?.value){
     confirmacionpassControl?.setErrors(null);
   }else{
     confirmacionpassControl?.setErrors({invalido: true})

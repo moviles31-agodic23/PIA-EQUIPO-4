@@ -18,10 +18,25 @@ export class LoginComponent  implements OnInit {
     
     });
   }
+
+  get usuarioInvalido(){
+    return this.form.get('nombreUsuario')?.invalid && this.form.get('nombreUsuario')?.touched;
+  }
+  get passInvalido(){
+    return this.form.get('pass')?.invalid && this.form.get('pass')?.touched;
+  }
+
   ngOnInit() {}
 
   login(){
- 
+   
+    console.log(this.form);
+    
+  if(this.form.invalid){
+    return Object.values(this.form.controls).forEach(control=>{
+      control.markAllAsTouched();
+    })
+  }
   }
 
 
