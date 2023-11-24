@@ -32,7 +32,7 @@ export class AuthService {
    }
 
   
-  signUpWhitEmailAndPassword(user:string, pass:string){
+  signUpWithEmailAndPassword(user:string, pass:string){
    return this.firebaseAuthenticationService.createUserWithEmailAndPassword(user,pass)
    .then((userCredential)=>{
     this.userData=userCredential.user
