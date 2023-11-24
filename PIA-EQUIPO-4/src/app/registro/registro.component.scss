@@ -5,16 +5,14 @@ ion-card {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 250px;
+    margin-top: 145px;
   }
   
   ion-card-content {
     width: 100%; 
   }
 
-
-
-.login {
+.registro {
   font-size: 17px;
   padding: 15px;
   border-radius: 10px;
@@ -38,6 +36,9 @@ ion-card {
 
   } 
 
+  small{
+    color: red;
+  }
 
  
   

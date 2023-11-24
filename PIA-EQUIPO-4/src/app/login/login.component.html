@@ -1,3 +1,35 @@
-<p>
-  login works!
-</p>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>LOGIN</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="form" (ngSubmit)="login()">
+
+  
+        <ion-item class="custom-input">
+          <ion-input formControlName="nombreUsuario" [class.is-invalid]="usuarioInvalido" id="nombreUsuario" required label="Usuario: " label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="usuarioInvalido">El usuario es un campo requerido</small>
+        <br><br>
+        
+        <ion-item class="custom-input">
+          <ion-input formControlName="pass" [class.is-invalid]="passInvalido" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
+        </ion-item>
+        <small *ngIf="passInvalido">Ingrese una contraseña con un minimo de 6 caracteres</small>
+        <br><br>
+
+        <button class="login" type="submit">Iniciar Sesion</button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer >
+    <ion-toolbar>
+        <ion-buttons >
+            <ion-button [routerLink]="['/registro']" > ¿No tienes una cuenta?</ion-button>
+            <ion-button [routerLink]="['/registro']" class="registrate"> Registrate</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+  </ion-footer>
