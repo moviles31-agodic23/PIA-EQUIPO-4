@@ -8,16 +8,18 @@
 
   
         <ion-item class="custom-input">
-          <ion-input formControlName="nombreUsuario" id="nombreUsuario" required label="Usuario: " label-placement="floating" fill="outline"></ion-input>
+          <ion-input formControlName="nombreUsuario" [class.is-invalid]="usuarioInvalido" id="nombreUsuario" required label="Usuario: " label-placement="floating" fill="outline"></ion-input>
         </ion-item>
-        <br>
+        <small *ngIf="usuarioInvalido">El usuario es un campo requerido</small>
+        <br><br>
         
         <ion-item class="custom-input">
-          <ion-input formControlName="pass" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
+          <ion-input formControlName="pass" [class.is-invalid]="passInvalido" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
         </ion-item>
-        <br>
+        <small *ngIf="passInvalido">Ingrese una contraseña con un minimo de 6 caracteres</small>
+        <br><br>
 
-        <button class="login" type="submit">Inciar Sesion</button>
+        <button class="login" type="submit">Iniciar Sesion</button>
       </form>
     </ion-card-content>
   </ion-card>

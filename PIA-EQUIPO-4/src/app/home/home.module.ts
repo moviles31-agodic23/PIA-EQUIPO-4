@@ -9,6 +9,7 @@ import { LoginComponent } from '../login/login.component';
 import { PaginaInicioComponent } from '../pagina-inicio/pagina-inicio.component';
 import { PaginaPerfilComponent } from '../pagina-perfil/pagina-perfil.component';
 import { RegistroComponent } from '../registro/registro.component';
+import { Firestore } from '@angular/fire/firestore';
 
 
 @NgModule({
