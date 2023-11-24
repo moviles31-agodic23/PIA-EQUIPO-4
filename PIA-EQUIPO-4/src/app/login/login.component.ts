@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'app/services/auth.service';
+
 
 
 @Component({
@@ -12,7 +14,7 @@ export class LoginComponent  implements OnInit {
    
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
     this.form = this.fb.group({
       nombreUsuario: ['', Validators.required],
       pass: ['', [Validators.required]],
@@ -27,7 +29,8 @@ export class LoginComponent  implements OnInit {
         control.markAllAsTouched();
       })
     }else{
-        this.router.navigate(['inicio'])
+      const { nombreUsuario, pass } = this.form.value;
+      this.authService.loginWithEmailAndPassword(nombreUsuario, pass);
     }
   }
 
