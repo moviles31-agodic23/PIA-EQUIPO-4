@@ -5,6 +5,8 @@ import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
 import { LoginComponent } from './login/login.component';
 import { registerLocaleData } from '@angular/common';
 import { RegistroComponent } from './registro/registro.component';
+import { FotoDetalleComponent } from './foto-detalle/foto-detalle.component';
+import { PostComponent } from './post/post.component';
 
 
 const routes: Routes = [
@@ -32,6 +34,14 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent
+  },
+  {
+    path: 'detalle',
+    component: FotoDetalleComponent
+  },
+  {
+    path: 'post',
+    component: PostComponent
   },
 ];
 

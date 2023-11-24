@@ -1,0 +1,30 @@
+
+  <ion-content>
+    <div *ngFor="let foto of fotos; index as i" class="imagen">
+      <img [src]="foto.webViewPath">
+    </div>
+    <ion-button (click)="tomarFoto()">tomar foto</ion-button>
+    <ion-item>
+      <ion-input label="Descripcion" labelPlacement="stacked" placeholder="Agregar un comentario"></ion-input>
+    </ion-item>
+    <ion-button>Publicar</ion-button>
+    <ion-button (click)="irAInicio()">Cancelar</ion-button>
+  </ion-content>
+  <ion-toolbar>
+    <ion-tabs class="tabs">
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="irAInicio()">
+          <ion-icon name="home"></ion-icon>
+          Home
+        </ion-tab-button>
+        <ion-tab-button (click)="irACamara()">
+          <ion-icon name="Camera"></ion-icon>
+          Foto
+        </ion-tab-button>
+        <ion-tab-button (click)="irAPerfil()">
+          <ion-icon name="person"></ion-icon>
+          Perfil
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>

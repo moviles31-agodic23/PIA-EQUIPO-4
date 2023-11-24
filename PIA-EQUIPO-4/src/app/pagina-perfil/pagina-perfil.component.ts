@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Foto } from '../foto.model';
+
 import { FotoService } from '../foto.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { FotoService } from '../foto.service';
 })
 export class PaginaPerfilComponent  implements OnInit {
 
-  constructor(private router: Router, private foto:FotoService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
 
@@ -26,8 +26,7 @@ export class PaginaPerfilComponent  implements OnInit {
                         "https://th.bing.com/th/id/OIP.PNLxg3EbdNVa-lUez5Sj3wHaLH?pid=ImgDet&rs=1",
                         "https://th.bing.com/th/id/OIP.PNLxg3EbdNVa-lUez5Sj3wHaLH?pid=ImgDet&rs=1",
                         "https://tritonvoice.co/wp-content/uploads/2019/03/asdddd.png",
-                        "https://i.ytimg.com/vi/vjef9yDg5KQ/maxresdefault.jpg"
-                        
+                        "https://i.ytimg.com/vi/vjef9yDg5KQ/maxresdefault.jpg", 
                       ],
   };
   
@@ -38,9 +37,7 @@ export class PaginaPerfilComponent  implements OnInit {
     this.router.navigate(['/perfil']);
   }
   irACamara(){
-    this.foto.addNewToGallery()
+    this.router.navigate(['/post'])
   }
-  
-  fotos: Foto[] = this.foto.fotos;
 }
 
