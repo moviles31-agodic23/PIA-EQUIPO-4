@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../usuario.module';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -8,16 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent  implements OnInit {
-  
-  Usuario: Usuario = { usuario: '', password: ''};
-
-  constructor(private router: Router) {}
-  
-  ngOnInit() {}
    
-  Ingresar(){
-    this.Usuario = { usuario: '', password: '' };
+  form: FormGroup;
 
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      nombreUsuario: ['', Validators.required],
+      pass: ['', [Validators.required]],
+    
+    });
+  }
+  ngOnInit() {}
+
+  login(){
+ 
   }
 
 
