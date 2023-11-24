@@ -20,6 +20,8 @@ ion-col{
     text-align: center;
     margin: auto;
     display: block;
+    padding: 1px;
+    
 }
 
 #nombrePerfil{
@@ -32,13 +34,14 @@ ion-col{
     float: left;
 }
 
-img #imagenesPerfil{
-    
+#imagenesPerfil{
+    Object-fit:cover;
+    width: 20vh;
+    height: 20vh;
+
 }
 
-#arrobaPerfil{
-    --border-style: none;
-}
+
 
 #editarPerfil{
     --background: none;
@@ -51,6 +54,13 @@ img #imagenesPerfil{
     width: 350px;
     font-size: min(.85rem,25px);
     letter-spacing: 2.5px;
+}
+
+.fotosPerfil{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    
 }
 
 

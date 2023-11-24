@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { registerLocaleData } from '@angular/common';
 import { RegistroComponent } from './registro/registro.component';
 
+
 const routes: Routes = [
   {
     path: 'home',
@@ -31,7 +32,7 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent
-  }
+  },
 ];
 
 @NgModule({

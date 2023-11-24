@@ -11,6 +11,7 @@ import { PaginaPerfilComponent } from '../pagina-perfil/pagina-perfil.component'
 import { RegistroComponent } from '../registro/registro.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
