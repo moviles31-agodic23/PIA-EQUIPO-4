@@ -10,7 +10,7 @@ export class FotoService {
 
   constructor() { }
 
-  public fotos: Foto[] = [];
+  public fotos:Foto[]=[];
   
 
   public async addNewToGallery() {    

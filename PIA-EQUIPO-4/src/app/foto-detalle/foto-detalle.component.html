@@ -1,7 +1,7 @@
 <ion-app>
   <ion-content>
     <ion-grid fixed class="ion-no-padding">
-      <ion-row *ngFor="let perfilEjemplo of perfilesEjemplo" class="publicaciones">
+      <ion-row class="publicaciones">
         <ion-card style="box-shadow: none !important; background: transparent !important; padding: 0% !important; margin: 0px !important" >
           <ion-card-content style="padding: 0% !important; margin: 0px !important" >
             <ion-grid  style="padding-inline-start: 0 !important; padding-inline-end: 0 !important;" >
@@ -33,7 +33,7 @@
   <ion-toolbar>
     <ion-tabs class="tabs">
       <ion-tab-bar slot="bottom">
-        <ion-tab-button (click)="irAInicio()">
+        <ion-tab-button>
           <ion-icon name="home"></ion-icon>
           Home
         </ion-tab-button>
@@ -49,7 +49,3 @@
     </ion-tabs>
   </ion-toolbar>
 </ion-app>
-
-
-
-

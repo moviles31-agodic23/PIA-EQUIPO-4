@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FotoService } from '../foto.service';
-import { Foto } from '../foto.model';
 
 @Component({
   selector: 'app-pagina-inicio',
@@ -10,7 +9,7 @@ import { Foto } from '../foto.model';
 })
 export class PaginaInicioComponent  implements OnInit {
 
-  constructor(private router: Router, private foto:FotoService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -54,8 +53,8 @@ export class PaginaInicioComponent  implements OnInit {
     this.router.navigate(['/perfil']);
   }
   irACamara(){
-    this.foto.addNewToGallery()
+    this.router.navigate(['/post'])
   }
   
-  fotos: Foto[] = this.foto.fotos;
+  
 }

@@ -10,6 +10,8 @@ import { PaginaInicioComponent } from '../pagina-inicio/pagina-inicio.component'
 import { PaginaPerfilComponent } from '../pagina-perfil/pagina-perfil.component';
 import { RegistroComponent } from '../registro/registro.component';
 import { Firestore } from '@angular/fire/firestore';
+import { FotoDetalleComponent } from 'app/foto-detalle/foto-detalle.component';
+import { PostComponent } from 'app/post/post.component';
 
 
 
@@ -21,6 +23,6 @@ import { Firestore } from '@angular/fire/firestore';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, LoginComponent, PaginaInicioComponent, PaginaPerfilComponent,RegistroComponent]
+  declarations: [HomePage, LoginComponent, PaginaInicioComponent, PaginaPerfilComponent,RegistroComponent,FotoDetalleComponent,PostComponent]  
 })
 export class HomePageModule {}
