@@ -3,7 +3,9 @@
   <ion-card style="box-shadow: none !important; background: transparent !important; padding: 0% !important; margin: 0px !important;border-radius: 0px !important;">
     <ion-grid id="perfilGrid">
       <ion-row>
-        @{{perfilEjemplo.nombrePerfil}}
+        <ion-item id="arrobaPerfil">
+          @{{perfilEjemplo.nombrePerfil}}
+        </ion-item>
       </ion-row>
       <ion-row>
         <ion-col size="3">
@@ -19,7 +21,6 @@
           {{perfilEjemplo.seguidosPerfil}}<br><strong>Seguidos</strong>
         </ion-col>
       </ion-row>
-       <ion-row></ion-row>
        <ion-row>
         <ion-col size="3">
           <div id="nombrePerfil">{{perfilEjemplo.nombrePerfil}}</div>
@@ -33,6 +34,11 @@
         </ion-col>
         <ion-col size="9"></ion-col>
        </ion-row>
+       <ion-row>
+        <ion-col>
+          <ion-button id="editarPerfil">Editar perfil</ion-button>
+        </ion-col>
+      </ion-row>
     </ion-grid>
   </ion-card>
   <ion-grid>

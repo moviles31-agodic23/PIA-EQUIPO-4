@@ -1,8 +1,10 @@
 #fotoPerfil{
-    width: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 100%;
     border: solid 3px rgb(71, 255, 47);
     padding: 3px;
+    Object-fit: cover;
 }
 ion-card{
     border-bottom: solid 3px gray;
@@ -15,13 +17,34 @@ ion-col{
 }
 
 #nombrePerfil{
+    font-size: 20px;
     float: left;
 }
 
 #descripcionPerfil{
+    font-size: 15px;
     float: left;
 }
 
 img #imagenesPerfil{
-    width: 100%;
+    
 }
+
+#arrobaPerfil{
+    --border-style: none;
+}
+
+#editarPerfil{
+    --background: none;
+    --border-radius: none;
+    --padding-top: none;
+    --padding-bottom: none;
+    
+    border-radius: 15px;
+    background-color: gray;
+    width: 350px;
+    font-size: min(.85rem,25px);
+    letter-spacing: 2.5px;
+}
+
+
