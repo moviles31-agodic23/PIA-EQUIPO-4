@@ -14,7 +14,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,ReactiveFormsModule, provideFirebaseApp(() => initializeApp({"projectId":"pia-equipo4-instagram","appId":"1:139104442538:web:cadeb33755405456e298d3","storageBucket":"pia-equipo4-instagram.appspot.com","apiKey":"AIzaSyAY7sORDE2A57mWSjcortp1FqE9DknLNEE","authDomain":"pia-equipo4-instagram.firebaseapp.com","messagingSenderId":"139104442538"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideFirebaseApp(() => initializeApp({"projectId":"pia-equipo4-instagram","appId":"1:139104442538:web:cadeb33755405456e298d3","storageBucket":"pia-equipo4-instagram.appspot.com","locationId":"us-central","apiKey":"AIzaSyAY7sORDE2A57mWSjcortp1FqE9DknLNEE","authDomain":"pia-equipo4-instagram.firebaseapp.com","messagingSenderId":"139104442538"}))],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,ReactiveFormsModule, provideFirebaseApp(() => initializeApp({"projectId":"pia-equipo4-instagram","appId":"1:139104442538:web:cadeb33755405456e298d3","storageBucket":"pia-equipo4-instagram.appspot.com","apiKey":"AIzaSyAY7sORDE2A57mWSjcortp1FqE9DknLNEE","authDomain":"pia-equipo4-instagram.firebaseapp.com","messagingSenderId":"139104442538"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
