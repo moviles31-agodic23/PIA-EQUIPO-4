@@ -44,15 +44,15 @@
 </ion-content>
 <ion-tabs>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="inicio" [routerLink]="['/inicio']">
-      <ion-icon name="home"></ion-icon>
+    <ion-tab-button>
+      <ion-icon name="home" (click)="irAInicio()"></ion-icon>
       Home
     </ion-tab-button>
     <ion-tab-button tab="Camara">
       <ion-icon name="Camera"></ion-icon>
       Foto
     </ion-tab-button>
-    <ion-tab-button tab="perfil" [routerLink]="['/perfil']">
+    <ion-tab-button>
       <ion-icon name="person"></ion-icon>
       Perfil
     </ion-tab-button>

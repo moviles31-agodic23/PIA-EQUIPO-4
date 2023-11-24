@@ -22,7 +22,7 @@
               </ion-row>
               <ion-row class="postText">
                 <div *ngIf="!perfilEjemplo.showFullText" class="textoDescripcion">{{ perfilEjemplo.descripcionFoto | slice:0:10 }}</div><div *ngIf="!perfilEjemplo.showFullText" (click)="perfilEjemplo.showFullText = true">... Ver más</div>
-                <div *ngIf="perfilEjemplo.showFullText">{{perfilEjemplo.descripcionFoto}}</div>
+                <div *ngIf="perfilEjemplo.showFullText" class="textoDescripcion">{{perfilEjemplo.descripcionFoto}}</div>
               </ion-row>
             </ion-grid>
           </ion-card-content>
@@ -32,8 +32,8 @@
   </ion-content>
   <ion-toolbar>
     <ion-tabs class="tabs">
-      <ion-tab-bar slot="bottom" >
-        <ion-tab-button tab="inicio" [routerLink]="['/inicio']">
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button>
           <ion-icon name="home"></ion-icon>
           Home
         </ion-tab-button>
@@ -41,7 +41,7 @@
           <ion-icon name="Camera"></ion-icon>
           Foto
         </ion-tab-button>
-        <ion-tab-button tab="perfil" [routerLink]="['/perfil']">
+        <ion-tab-button (click)="irAPerfil()">
           <ion-icon name="person"></ion-icon>
           Perfil
         </ion-tab-button>

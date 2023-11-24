@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-perfil',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaPerfilComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
 
@@ -24,5 +25,9 @@ export class PaginaPerfilComponent  implements OnInit {
                         "https://tritonvoice.co/wp-content/uploads/2019/03/asdddd.png"
                       ],
   };
-
+  
+  irAInicio(){
+    this.router.navigate(['/inicio']);
+  }
 }
+
