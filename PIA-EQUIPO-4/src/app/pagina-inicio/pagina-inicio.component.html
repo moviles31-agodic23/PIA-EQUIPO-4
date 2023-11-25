@@ -1,34 +1,36 @@
 <ion-app>
   <ion-content>
-    <ion-grid fixed class="ion-no-padding">
-      <ion-row *ngFor="let perfilEjemplo of perfilesEjemplo" class="publicaciones">
-        <ion-card style="box-shadow: none !important; background: transparent !important; padding: 0% !important; margin: 0px !important" >
-          <ion-card-content style="padding: 0% !important; margin: 0px !important" >
-            <ion-grid  style="padding-inline-start: 0 !important; padding-inline-end: 0 !important;" >
-              <ion-row class="postHeader">
-                  <img class="fotoPerfil" src="{{perfilEjemplo.fotoPerfil}}" alt="" (click)="irAPerfil()">
-                  <div class="nombrePerfil" (click)="irAPerfil()"> {{perfilEjemplo.nombrePerfil}}</div>
-                <ion-icon name="ellipsis-horizontal-outline" class="tresPuntos"></ion-icon>
-              </ion-row>
-              <ion-row class="fotosDelPerfil">
-                <img (click)="perfilEjemplo.like=!perfilEjemplo.like" src="{{perfilEjemplo.fotosDelPerfil}}" alt="">
-              </ion-row>
-              <ion-row class="iconosDeFoto">
-                <ion-icon *ngIf="!perfilEjemplo.like" name="heart-outline" (click)="perfilEjemplo.like=!perfilEjemplo.like"></ion-icon>
-                <ion-icon *ngIf="perfilEjemplo.like" name="heart-dislike" (click)="perfilEjemplo.like=!perfilEjemplo.like"></ion-icon>
-                <ion-icon name="chatbubble-outline"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
+    <div *ngFor="let perfil of perfilesUsuarios">
+      <ion-grid fixed class="ion-no-padding">
+        <ion-row *ngFor="let foto of perfil.fotos" class="publicaciones">
+          <ion-card style="box-shadow: none !important; background: transparent !important; padding: 0% !important; margin: 0px !important" >
+            <ion-card-content style="padding: 0% !important; margin: 0px !important" >
+              <ion-grid  style="padding-inline-start: 0 !important; padding-inline-end: 0 !important;" >
+                <ion-row class="postHeader">
+                    <img class="fotoPerfil" src="{{perfil?.fotoPerfil}}" alt="" (click)="irAPerfil()">
+                    <div class="nombrePerfil" (click)="irAPerfil()"> {{perfil?.nombreUsuario}}</div>
+                  <ion-icon name="ellipsis-horizontal-outline" class="tresPuntos"></ion-icon>
+                </ion-row>
+                <ion-row class="fotosDelPerfil">
+                  <img (click)="foto.like=!foto.like" src="{{foto?.source}}" alt="">
+                </ion-row>
+                <ion-row class="iconosDeFoto">
+                  <ion-icon *ngIf="!foto.like" name="heart-outline"></ion-icon>
+                  <ion-icon *ngIf="foto.like" name="heart-dislike" (click)="foto.like=!foto.like"></ion-icon>
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                  <ion-icon name="paper-plane-outline"></ion-icon>
 
-              </ion-row>
-              <ion-row class="postText">
-                <div *ngIf="!perfilEjemplo.showFullText" class="textoDescripcion">{{ perfilEjemplo.descripcionFoto | slice:0:10 }}</div><div *ngIf="!perfilEjemplo.showFullText" (click)="perfilEjemplo.showFullText = true">... Ver más</div>
-                <div *ngIf="perfilEjemplo.showFullText" class="textoDescripcion">{{perfilEjemplo.descripcionFoto}}</div>
-              </ion-row>
-            </ion-grid>
-          </ion-card-content>
-        </ion-card>
-      </ion-row>
-    </ion-grid>
+                </ion-row>
+                <ion-row class="postText">
+                  <div *ngIf="!foto.showFullText" class="textoDescripcion">{{ foto?.descripcion | slice:0:10 }}</div><div *ngIf="!perfilEjemplo.showFullText" (click)="perfilEjemplo.showFullText = true">... Ver más</div>
+                  <div *ngIf="foto.showFullText" class="textoDescripcion">{{foto?.descripcion}}</div>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-row>
+      </ion-grid>
+    </div>
   </ion-content>
   <ion-toolbar>
     <ion-tabs class="tabs">

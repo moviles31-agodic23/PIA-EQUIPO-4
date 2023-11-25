@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Usuario } from 'app/interfaces/usuario.interface';
 import { AuthService } from 'app/services/auth.service';
+import { FirestoreService } from 'app/services/firestore.service';
+import { UtilsService } from 'app/services/utils.service';
 
 
 
@@ -11,13 +14,17 @@ import { AuthService } from 'app/services/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent  implements OnInit {
-   
+  
   form: FormGroup;
+
+  utilsService = inject(UtilsService)
+  firestoreService = inject(FirestoreService)
 
   constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
     this.form = this.fb.group({
-      correo: ['', [Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
-      pass: ['', [Validators.required]],
+      uid: [''],
+      email: ['', Validators.required],
+      password: ['', [Validators.required]],
     
     });
   }
@@ -29,17 +36,15 @@ export class LoginComponent  implements OnInit {
         control.markAllAsTouched();
       })
     }else{
-      const { correo, pass } = this.form.value;
-      this.authService.loginWithEmailAndPassword(correo, pass);
+      this.authService.loginWithEmailAndPassword(this.form.value as Usuario);
     }
   }
 
   get usuarioInvalido(){
-    return this.form.get('correo')?.invalid && this.form.get('correo')?.touched;
+    return this.form.get('email')?.invalid && this.form.get('email')?.touched;
   }
   get passInvalido(){
-    return this.form.get('pass')?.invalid && this.form.get('pass')?.touched;
+    return this.form.get('password')?.invalid && this.form.get('password')?.touched;
   }
-
 
 }

@@ -12,6 +12,7 @@ import { RegistroComponent } from '../registro/registro.component';
 import { Firestore } from '@angular/fire/firestore';
 import { FotoDetalleComponent } from 'app/foto-detalle/foto-detalle.component';
 import { PostComponent } from 'app/post/post.component';
+import { EditarPerfilModalComponent } from 'app/pagina-perfil/components/editar-perfil-modal/editar-perfil-modal.component';
 
 
 
@@ -23,6 +24,6 @@ import { PostComponent } from 'app/post/post.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, LoginComponent, PaginaInicioComponent, PaginaPerfilComponent,RegistroComponent,FotoDetalleComponent,PostComponent]  
+  declarations: [HomePage, LoginComponent, PaginaInicioComponent, PaginaPerfilComponent,RegistroComponent,FotoDetalleComponent,PostComponent, EditarPerfilModalComponent]  
 })
 export class HomePageModule {}

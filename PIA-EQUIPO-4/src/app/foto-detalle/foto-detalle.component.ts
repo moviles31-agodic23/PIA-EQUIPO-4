@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FotoService } from '../foto.service';
-import { Foto } from '../foto.model';
+import { Foto } from '../interfaces/foto.interface';
 
 @Component({
   selector: 'app-foto-detalle',

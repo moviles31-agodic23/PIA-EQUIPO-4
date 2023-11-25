@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { PostComponent } from './post.component';
+import { EditarPerfilModalComponent } from './editar-perfil-modal.component';
 
-describe('PostComponent', () => {
-  let component: PostComponent;
-  let fixture: ComponentFixture<PostComponent>;
+describe('EditarPerfilModalComponent', () => {
+  let component: EditarPerfilModalComponent;
+  let fixture: ComponentFixture<EditarPerfilModalComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostComponent ],
+      declarations: [ EditarPerfilModalComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PostComponent);
+    fixture = TestBed.createComponent(EditarPerfilModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
