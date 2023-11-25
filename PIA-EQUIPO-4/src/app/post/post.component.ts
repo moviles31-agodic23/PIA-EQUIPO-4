@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FotoService } from 'app/foto.service';
-import { Foto } from 'app/foto.model';
+import { Foto } from 'app/interfaces/foto.interface';
 
 @Component({
   selector: 'app-post',

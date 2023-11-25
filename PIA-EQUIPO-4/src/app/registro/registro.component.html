@@ -26,7 +26,7 @@
         <br><br>
 
         <ion-item class="custom-input">
-          <ion-input formControlName="correo" [class.is-invalid]="correoInvalido" id="correo" required label="Correo :" label-placement="floating" fill="outline" type="email"></ion-input>
+          <ion-input formControlName="email" [class.is-invalid]="correoInvalido" id="correo" required label="Correo :" label-placement="floating" fill="outline" type="email"></ion-input>
         </ion-item>
         <small *ngIf="correoInvalido">El correo es un campo requerido</small>
         <br><br>
@@ -38,13 +38,13 @@
         <br><br>
         
         <ion-item class="custom-input">
-          <ion-input formControlName="pass" [class.is-invalid]="passInvalido" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
+          <ion-input formControlName="password" [class.is-invalid]="passInvalido" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
         </ion-item>
         <small *ngIf="passInvalido">Ingrese una contraseña con un minimo de 6 caracteres</small>
         <br><br>
         
         <ion-item class="custom-input">
-          <ion-input formControlName="confirmacionpass"  [class.is-invalid]="confirmacionpassInvalido" id="confirmacionpass" required label="Confirmación Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
+          <ion-input formControlName="confirmacionpassword"  [class.is-invalid]="confirmacionpassInvalido" id="confirmacionpass" required label="Confirmación Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
         </ion-item>
         <small *ngIf="confirmacionpassInvalido">Las contraseñas no coiciden</small>
         <br><br>

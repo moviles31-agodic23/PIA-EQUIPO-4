@@ -1,5 +1,9 @@
-export interface user{
-    id: string;
+export interface Usuario{
+    uid: string;
+    nombreUsuario: string;
     email: string;
-    usuario: string;
+    password: string;
+    nombre: string;
+    primerApellido: string;
+    segundoApellido: string;
 }

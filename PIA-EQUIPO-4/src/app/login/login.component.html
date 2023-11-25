@@ -8,13 +8,13 @@
 
   
         <ion-item class="custom-input">
-          <ion-input formControlName="nombreUsuario" [class.is-invalid]="usuarioInvalido" id="nombreUsuario" required label="Usuario: " label-placement="floating" fill="outline"></ion-input>
+          <ion-input formControlName="email" [class.is-invalid]="usuarioInvalido" id="nombreUsuario" required label="Usuario: " label-placement="floating" fill="outline"></ion-input>
         </ion-item>
         <small *ngIf="usuarioInvalido">Usuario Invalido</small>
         <br><br>
         
         <ion-item class="custom-input">
-          <ion-input formControlName="pass" [class.is-invalid]="passInvalido" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
+          <ion-input formControlName="password" [class.is-invalid]="passInvalido" id="pass" required label="Contraseña:" type="password" label-placement="floating" fill="outline"></ion-input>
         </ion-item>
         <small *ngIf="passInvalido">Contraseña Invalida</small>
         <br><br>
