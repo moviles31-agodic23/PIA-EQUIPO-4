@@ -16,7 +16,7 @@ export class LoginComponent  implements OnInit {
 
   constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
     this.form = this.fb.group({
-      nombreUsuario: ['', Validators.required],
+      correo: ['', [Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       pass: ['', [Validators.required]],
     
     });
@@ -29,13 +29,13 @@ export class LoginComponent  implements OnInit {
         control.markAllAsTouched();
       })
     }else{
-      const { nombreUsuario, pass } = this.form.value;
-      this.authService.loginWithEmailAndPassword(nombreUsuario, pass);
+      const { correo, pass } = this.form.value;
+      this.authService.loginWithEmailAndPassword(correo, pass);
     }
   }
 
   get usuarioInvalido(){
-    return this.form.get('nombreUsuario')?.invalid && this.form.get('nombreUsuario')?.touched;
+    return this.form.get('correo')?.invalid && this.form.get('correo')?.touched;
   }
   get passInvalido(){
     return this.form.get('pass')?.invalid && this.form.get('pass')?.touched;
