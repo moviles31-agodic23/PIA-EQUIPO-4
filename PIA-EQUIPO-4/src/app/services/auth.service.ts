@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   userData: any;
   constructor(private firebaseAuthenticationService:AngularFireAuth, private router:Router, private ngZone: NgZone) {
